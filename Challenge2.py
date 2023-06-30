@@ -1,15 +1,28 @@
-l = [-6, -5, 0, 5, 6]
-l = [(entry**2) for entry in l]
+#Variable global s
 s = 4
+#Variable SS calculada de s 
 s = int(str(s)+str(s))
-l = [entry for entry in l if entry <= s]
 
-for iteration in range(0, len(l)-1):	
-	for i in range(0, len(l)-1):
-	    if (l[i]>= l[i+1]):
-	        temporal = l[i+1]
-	        l[i+1] = l[i]
-	        l[i] = temporal
+#Función que calcula las potencias y envía el arreglo a ser ordenado
+def calcular (array):
+	array = [(entry**2) for entry in array]
+	array = [entry for entry in array if entry <= s]
+
+	array = ordenar(array)
+
+	return array
+
+#Función que ordena el arreglo
+def ordenar (array):
+	for iteration in range(0, len(array)-1):	
+		for i in range(0, len(array)-1):
+		    if (array[i]>= array[i+1]):
+		        temporal = array[i+1]
+		        array[i+1] = array[i]
+		        array[i] = temporal
+
+	return array
         
-
-print(l)
+#main
+if __name__ == '__main__':
+	print(calcular([-6, -5, 0, 5, 6]))
