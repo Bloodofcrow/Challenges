@@ -6,7 +6,7 @@ def ordenarYCalcular(array):
 
 #Función que encuentra el menor número que no se puede generar
 def calcular(array, posible):
-    if array == [] : return posible + 1
+    if array == [] : return posible
     if array[0] > posible: return posible 
     posible += array[0]
     return(calcular(array[1:], posible))
