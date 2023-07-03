@@ -6,8 +6,7 @@ def ordenarYCalular(array):
 
 def calcular(array, posible):
     if array == [] : return posible + 1
-    if array[0] > posible:
-            return posible + 1
+    if array[0] > posible: return posible + 1
     posible += index
     return(calcular(array[1:], posible))
 
