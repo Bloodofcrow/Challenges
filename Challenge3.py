@@ -1,5 +1,5 @@
 #Función que ordena y envía al cálculo 
-def ordenarYCalular(array):
+def ordenarYCalcular(array):
     array.sort()
     posible = 1  
     return(calcular(array, posible))
@@ -7,8 +7,8 @@ def ordenarYCalular(array):
 #Función que encuentra el menor número que no se puede generar
 def calcular(array, posible):
     if array == [] : return posible + 1
-    if array[0] > posible: return posible + 1
-    posible += index
+    if array[0] > posible: return posible 
+    posible += array[0]
     return(calcular(array[1:], posible))
 
 #main
