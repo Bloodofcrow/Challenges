@@ -14,10 +14,8 @@ def calcular (array):
 
 #Función que ordena el arreglo
 def ordenar (array):
-	numeroDeVeces = 0
 	for iteration in range(0, len(array)-1):	
 		for i in range(0, len(array) - 1 - iteration):
-		    numeroDeVeces += 1
 		    if (array[i]>= array[i+1]):
 		        array[i], array[i + 1] = array[i + 1], array[i]
 	return array
