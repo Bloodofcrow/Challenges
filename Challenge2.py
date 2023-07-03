@@ -14,15 +14,17 @@ def calcular (array):
 
 #Función que ordena el arreglo
 def ordenar (array):
+	numeroDeVeces = 0
 	for iteration in range(0, len(array)-1):	
-		for i in range(0, len(array)-1):
+		for i in range(0, len(array) - 1 - iteration):
+		    numeroDeVeces += 1
 		    if (array[i]>= array[i+1]):
-		        temporal = array[i+1]
-		        array[i+1] = array[i]
-		        array[i] = temporal
-
+		        array[i], array[i + 1] = array[i + 1], array[i]
 	return array
         
 #main
 if __name__ == '__main__':
+	print(calcular([-6, -5, 0, 1, 2,  5, 6]))
+	print(calcular([-2, -1]))
 	print(calcular([-6, -5, 0, 5, 6]))
+	print(calcular([-10, 10]))

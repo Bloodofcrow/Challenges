@@ -19,4 +19,10 @@ def calcular(array):
 
 #main
 if __name__ == '__main__':
-    print(calcular([1,24,3,5,6,152]))
+    print(calcular([1, 2, 3, 4, 5, 6]))
+    print(calcular([10, 20, 30, 40]))  
+    print(calcular([6]))  
+    print(calcular([66]))  
+    print(calcular([65]))  
+    print(calcular([6, 2, 1]))  
+    print(calcular([60, 6, 5, 4, 3, 2, 7, 7, 29, 1])) 
